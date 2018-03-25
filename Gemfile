@@ -10,6 +10,8 @@ gem 'sinatra'
 gem 'sinatra-activerecord'
 gem 'activerecord'
 gem 'rake'
+gem 'sqlite3'
+
 
 group :test do
   gem 'rspec'
