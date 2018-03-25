@@ -3,6 +3,6 @@ require 'sinatra/activerecord'
 
 class App < Sinatra::Base
   get '/' do
-    "Hello World!"
+    erb :'ratings/new'
   end
 end
