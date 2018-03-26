@@ -16,4 +16,5 @@ gem 'sqlite3'
 group :test do
   gem 'rspec'
   gem 'capybara'
+  gem 'database_cleaner'
 end

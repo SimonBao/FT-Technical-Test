@@ -26,3 +26,10 @@ For bonus credit consider using one or more of these techniques:
     I want view ratings for ft.com
 ```
 
+####Tech Stack
+- Sqlite3
+- Ruby
+    - Sinatra
+- Rspec
+    -Capybara
+- AWS Elastic Beanstalk
