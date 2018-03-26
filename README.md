@@ -25,6 +25,18 @@ For bonus credit consider using one or more of these techniques:
     To know if users are like our website
     I want view ratings for ft.com
 ```
+####MVP 3
+```
+    As Financial Times
+    To know if everything is working as expected
+    I want have automated testing
+```
+
+```
+    As Financial Times
+    To know if users are like our website
+    I want view ratings for ft.com
+```
 
 ####Tech Stack
 - Sqlite3

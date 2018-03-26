@@ -1,28 +1,33 @@
 require 'sinatra'
 require 'sinatra/activerecord'
-
-set :database, "sqlite3:ft-tech-test.sqlite3"
-
+require 'sinatra/json'
 require './models/rating'
+# Set database to sqlite3 - lightweight db
+set :database, 'sqlite3:ft-tech-test.sqlite3'
+# App controller
 class App < Sinatra::Base
-
   get '/' do
     redirect '/rating/new'
   end
 
   get '/rating' do
-    @ratings = Rating.all()
+    @ratings = Rating.all
     erb :'ratings/ratings'
   end
 
   post '/rating' do
-    Rating.create(score: params[:score])
+    if params[:score].to_i <= 0
+    else
+      Rating.create(score: params[:score])
+    end
     redirect '/'
   end
-
 
   get '/rating/new' do
     erb :'ratings/new'
   end
 
+  get '/api/rating' do
+    json Rating.all
+  end
 end

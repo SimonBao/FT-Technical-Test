@@ -5,9 +5,18 @@
   <title>o-header: header demo</title>
   <meta name="viewport" content="initial-scale=1.0, width=device-width">
   <script src="//cdn.polyfill.io/v2/polyfill.min.js?features=CustomEvent,Array.from,Event,Element.prototype.classList,Array.prototype.forEach,Array.prototype.map,Array.prototype.filter,requestAnimationFrame,default"></script>
-  <style>body { margin: 0; } .core .o--if-js, .enhanced .o--if-no-js { display: none !important; }</style>
-  <script>(function(d) { d.className = d.className + ' demo-js'; })(document.documentElement);</script>
+  <style>body {
+    margin: 0;
+  }
+
+  .core .o--if-js, .enhanced .o--if-no-js {
+    display: none !important;
+  }</style>
+  <script>(function (d) {
+      d.className = d.className + ' demo-js';
+  })(document.documentElement);</script>
   <link rel="stylesheet" href="//www.ft.com/__origami/service/build/v2/bundles/css?modules=o-header%407.3.0%3A%2Fdemos%2Fsrc%2Fmain.scss%2Co-colors%2Co-normalise">
+  <link rel='stylesheet' type='text/css' href='./public/css/layout.css'>
 </head>
 <body>
 <header class="o-header" data-o-component="o-header" data-o-header--no-js="">
@@ -53,7 +62,8 @@
   <div id="o-header-search" class="o-header__row o-header__search o--if-no-js" role="search">
     <div class="o-header__container">
       <form class="o-header__search-form" action="/search" role="search" aria-label="Site search">
-        <label class="o-header__visually-hidden" for="o-header-search-term">Search the <abbr title="Financial Times">FT</abbr></label>
+        <label class="o-header__visually-hidden" for="o-header-search-term">Search the
+          <abbr title="Financial Times">FT</abbr></label>
         <input class="o-header__search-term" id="o-header-search-term" name="q" type="text" placeholder="Search the FT">
         <button class="o-header__search-submit" type="submit">
           Search
@@ -64,7 +74,8 @@
   <div id="o-header-search-js" class="o-header__row o-header__search" role="search" data-o-header-search="">
     <div class="o-header__container">
       <form class="o-header__search-form" action="/search" role="search" aria-label="Site search">
-        <label class="o-header__visually-hidden" for="o-header-search-term-js">Search the <abbr title="Financial Times">FT</abbr></label>
+        <label class="o-header__visually-hidden" for="o-header-search-term-js">Search the
+          <abbr title="Financial Times">FT</abbr></label>
         <input class="o-header__search-term" id="o-header-search-term-js" name="q" type="text" placeholder="Search the FT">
         <button class="o-header__search-submit" type="submit">
           Search
@@ -94,7 +105,7 @@
     <div class="o-header__container">
       <ul class="o-header__nav-list o-header__nav-list--left">
         <li class="o-header__nav-item">
-          <a class="o-header__nav-link o-header__nav-link--primary" href="" aria-label="Current page" aria-current="page" id="o-header-link-">Home</a>
+          <a class="o-header__nav-link o-header__nav-link--primary" href="/" aria-label="Current page" aria-current="page" id="o-header-link-">Home</a>
         </li>
         <li class="o-header__nav-item">
           <a class="o-header__nav-link o-header__nav-link--primary" href="" id="o-header-link-">World</a>
@@ -116,6 +127,9 @@
         </li>
         <li class="o-header__nav-item">
           <a class="o-header__nav-link o-header__nav-link--primary" href="" id="o-header-link-">Life &amp; Arts</a>
+        </li>
+        <li class="o-header__nav-item">
+          <a class="o-header__nav-link o-header__nav-link--primary" href="/rating" id="o-header-link-">Ratings</a>
         </li>
       </ul>
       <ul class="o-header__nav-list o-header__nav-list--right">
@@ -144,13 +158,15 @@
     </div>
 
     <nav class="o-header__drawer-editions" aria-label="Edition switcher">
-      <a class="o-header__drawer-editions-link" href="/uk?edition=uk" aria-label="Current edition" aria-current="page">UK Edition</a>
+      <a class="o-header__drawer-editions-link" href="/uk?edition=uk" aria-label="Current edition" aria-current="page">UK
+        Edition</a>
       <a class="o-header__drawer-editions-link" href="/international?edition=international">International Edition</a>
     </nav>
 
     <div class="o-header__drawer-search">
       <form class="o-header__drawer-search-form" action="/search" role="search" aria-label="Site search">
-        <label class="o-header__visually-hidden" for="o-header-drawer-search-term">Search the <abbr title="Financial Times">FT</abbr></label>
+        <label class="o-header__visually-hidden" for="o-header-drawer-search-term">Search the
+          <abbr title="Financial Times">FT</abbr></label>
         <input class="o-header__drawer-search-term" id="o-header-drawer-search-term" name="q" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search the FT">
         <button class="o-header__drawer-search-submit" type="submit">
           <span class="o-header__visually-hidden">Search</span>
@@ -173,7 +189,8 @@
           </div>
           <ul class="o-header__drawer-menu-list o-header__drawer-menu-list--child" id="o-header-drawer-child-1">
             <li class="o-header__drawer-menu-item">
-              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">World Economy</a>
+              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">World
+                Economy</a>
             </li>
             <li class="o-header__drawer-menu-item">
               <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">UK</a>
@@ -188,19 +205,23 @@
               <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Africa</a>
             </li>
             <li class="o-header__drawer-menu-item">
-              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Asia Pacific</a>
+              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Asia
+                Pacific</a>
             </li>
             <li class="o-header__drawer-menu-item">
-              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Emerging Markets</a>
+              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Emerging
+                Markets</a>
             </li>
             <li class="o-header__drawer-menu-item">
               <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Europe</a>
             </li>
             <li class="o-header__drawer-menu-item">
-              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Latin America</a>
+              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Latin
+                America</a>
             </li>
             <li class="o-header__drawer-menu-item">
-              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Middle East and Africa</a>
+              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Middle
+                East and Africa</a>
             </li>
           </ul>
         </li>
@@ -213,13 +234,16 @@
           </div>
           <ul class="o-header__drawer-menu-list o-header__drawer-menu-list--child" id="o-header-drawer-child-2">
             <li class="o-header__drawer-menu-item">
-              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">UK Economy</a>
+              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">UK
+                Economy</a>
             </li>
             <li class="o-header__drawer-menu-item">
-              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">UK Politics &amp; Policy</a>
+              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">UK
+                Politics &amp; Policy</a>
             </li>
             <li class="o-header__drawer-menu-item">
-              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">UK Companies</a>
+              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">UK
+                Companies</a>
             </li>
           </ul>
         </li>
@@ -247,7 +271,8 @@
               <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Media</a>
             </li>
             <li class="o-header__drawer-menu-item">
-              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Retail &amp; Consumer</a>
+              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Retail &amp;
+                Consumer</a>
             </li>
             <li class="o-header__drawer-menu-item">
               <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Technology</a>
@@ -272,10 +297,12 @@
               <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Alphaville</a>
             </li>
             <li class="o-header__drawer-menu-item">
-              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Markets Data</a>
+              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Markets
+                Data</a>
             </li>
             <li class="o-header__drawer-menu-item">
-              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Capital Markets</a>
+              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Capital
+                Markets</a>
             </li>
             <li class="o-header__drawer-menu-item">
               <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Commodities</a>
@@ -287,7 +314,8 @@
               <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Equities</a>
             </li>
             <li class="o-header__drawer-menu-item">
-              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Fund Management</a>
+              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Fund
+                Management</a>
             </li>
             <li class="o-header__drawer-menu-item">
               <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Trading</a>
@@ -306,10 +334,12 @@
               <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Columnists</a>
             </li>
             <li class="o-header__drawer-menu-item">
-              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">FT View</a>
+              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">FT
+                View</a>
             </li>
             <li class="o-header__drawer-menu-item">
-              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">The Big Read</a>
+              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">The
+                Big Read</a>
             </li>
             <li class="o-header__drawer-menu-item">
               <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Lex</a>
@@ -327,17 +357,20 @@
         </li>
         <li class="o-header__drawer-menu-item ">
           <div class="o-header__drawer-menu-toggle-wrapper">
-            <a class="o-header__drawer-menu-link o-header__drawer-menu-link--parent o-header__drawer-menu-link--unselected" href="#">Work &amp; Careers</a>
+            <a class="o-header__drawer-menu-link o-header__drawer-menu-link--parent o-header__drawer-menu-link--unselected" href="#">Work &amp;
+              Careers</a>
             <button class="o-header__drawer-menu-toggle o-header__drawer-menu-toggle--unselected" aria-controls="o-header-drawer-child-6">
               Show more Work &amp; Careers links
             </button>
           </div>
           <ul class="o-header__drawer-menu-list o-header__drawer-menu-list--child" id="o-header-drawer-child-6">
             <li class="o-header__drawer-menu-item">
-              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Business School Rankings</a>
+              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Business
+                School Rankings</a>
             </li>
             <li class="o-header__drawer-menu-item">
-              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Business Education</a>
+              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Business
+                Education</a>
             </li>
             <li class="o-header__drawer-menu-item">
               <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Entrepreneurship</a>
@@ -346,26 +379,30 @@
               <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Recruitment</a>
             </li>
             <li class="o-header__drawer-menu-item">
-              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Business Books</a>
+              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Business
+                Books</a>
             </li>
           </ul>
         </li>
         <li class="o-header__drawer-menu-item ">
           <div class="o-header__drawer-menu-toggle-wrapper">
-            <a class="o-header__drawer-menu-link o-header__drawer-menu-link--parent o-header__drawer-menu-link--unselected" href="#">Life &amp; Arts</a>
+            <a class="o-header__drawer-menu-link o-header__drawer-menu-link--parent o-header__drawer-menu-link--unselected" href="#">Life &amp;
+              Arts</a>
             <button class="o-header__drawer-menu-toggle o-header__drawer-menu-toggle--unselected" aria-controls="o-header-drawer-child-7">
               Show more Life &amp; Arts links
             </button>
           </div>
           <ul class="o-header__drawer-menu-list o-header__drawer-menu-list--child" id="o-header-drawer-child-7">
             <li class="o-header__drawer-menu-item">
-              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">House &amp; Home</a>
+              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">House &amp;
+                Home</a>
             </li>
             <li class="o-header__drawer-menu-item">
               <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Books</a>
             </li>
             <li class="o-header__drawer-menu-item">
-              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Food &amp; Drink</a>
+              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Food &amp;
+                Drink</a>
             </li>
             <li class="o-header__drawer-menu-item">
               <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Travel</a>
@@ -383,7 +420,8 @@
               <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Music</a>
             </li>
             <li class="o-header__drawer-menu-item">
-              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Film, TV &amp; Radio</a>
+              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Film,
+                TV &amp; Radio</a>
             </li>
             <li class="o-header__drawer-menu-item">
               <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Magazine</a>
@@ -392,14 +430,16 @@
         </li>
         <li class="o-header__drawer-menu-item ">
           <div class="o-header__drawer-menu-toggle-wrapper">
-            <a class="o-header__drawer-menu-link o-header__drawer-menu-link--parent o-header__drawer-menu-link--unselected" href="#">Personal Finance</a>
+            <a class="o-header__drawer-menu-link o-header__drawer-menu-link--parent o-header__drawer-menu-link--unselected" href="#">Personal
+              Finance</a>
             <button class="o-header__drawer-menu-toggle o-header__drawer-menu-toggle--unselected" aria-controls="o-header-drawer-child-8">
               Show more Personal Finance links
             </button>
           </div>
           <ul class="o-header__drawer-menu-list o-header__drawer-menu-list--child" id="o-header-drawer-child-8">
             <li class="o-header__drawer-menu-item">
-              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Property &amp; Mortgages</a>
+              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Property &amp;
+                Mortgages</a>
             </li>
             <li class="o-header__drawer-menu-item">
               <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Investments</a>
@@ -411,12 +451,14 @@
               <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Tax</a>
             </li>
             <li class="o-header__drawer-menu-item">
-              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Bankings &amp; Savings</a>
+              <a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="#">Bankings &amp;
+                Savings</a>
             </li>
           </ul>
         </li>
         <li class="o-header__drawer-menu-item ">
-          <a class="o-header__drawer-menu-link o-header__drawer-menu-link-- o-header__drawer-menu-link--unselected" href="#">Science &amp; Environment</a>
+          <a class="o-header__drawer-menu-link o-header__drawer-menu-link-- o-header__drawer-menu-link--unselected" href="#">Science &amp;
+            Environment</a>
         </li>
         <li class="o-header__drawer-menu-item o-header__drawer-menu-item--heading">FT recommends</li>
         <li class="o-header__drawer-menu-item ">
@@ -426,28 +468,33 @@
           <a class="o-header__drawer-menu-link o-header__drawer-menu-link-- o-header__drawer-menu-link--unselected" href="#">Alphaville</a>
         </li>
         <li class="o-header__drawer-menu-item ">
-          <a class="o-header__drawer-menu-link o-header__drawer-menu-link-- o-header__drawer-menu-link--unselected" href="#">Lunch with the FT</a>
+          <a class="o-header__drawer-menu-link o-header__drawer-menu-link-- o-header__drawer-menu-link--unselected" href="#">Lunch
+            with the FT</a>
         </li>
         <li class="o-header__drawer-menu-item ">
           <a class="o-header__drawer-menu-link o-header__drawer-menu-link-- o-header__drawer-menu-link--unselected" href="#">Video</a>
         </li>
         <li class="o-header__drawer-menu-item ">
-          <a class="o-header__drawer-menu-link o-header__drawer-menu-link-- o-header__drawer-menu-link--unselected" href="#">Special Reports</a>
+          <a class="o-header__drawer-menu-link o-header__drawer-menu-link-- o-header__drawer-menu-link--unselected" href="#">Special
+            Reports</a>
         </li>
         <li class="o-header__drawer-menu-item ">
-          <a class="o-header__drawer-menu-link o-header__drawer-menu-link-- o-header__drawer-menu-link--unselected" href="#">News feed</a>
+          <a class="o-header__drawer-menu-link o-header__drawer-menu-link-- o-header__drawer-menu-link--unselected" href="#">News
+            feed</a>
         </li>
         <li class="o-header__drawer-menu-item ">
           <a class="o-header__drawer-menu-link o-header__drawer-menu-link-- o-header__drawer-menu-link--unselected" href="#">Newsletters</a>
         </li>
         <li class="o-header__drawer-menu-item o-header__drawer-menu-item--divide">
-          <a class="o-header__drawer-menu-link o-header__drawer-menu-link--secondary o-header__drawer-menu-link--unselected" href="#">My FT</a>
+          <a class="o-header__drawer-menu-link o-header__drawer-menu-link--secondary o-header__drawer-menu-link--unselected" href="#">My
+            FT</a>
         </li>
         <li class="o-header__drawer-menu-item ">
           <a class="o-header__drawer-menu-link o-header__drawer-menu-link--secondary o-header__drawer-menu-link--unselected" href="#">Portfolio</a>
         </li>
         <li class="o-header__drawer-menu-item ">
-          <a class="o-header__drawer-menu-link o-header__drawer-menu-link--secondary o-header__drawer-menu-link--unselected" href="#">Today&apos;s Paper</a>
+          <a class="o-header__drawer-menu-link o-header__drawer-menu-link--secondary o-header__drawer-menu-link--unselected" href="#">Today&apos;s
+            Paper</a>
         </li>
       </ul>
     </nav>
